@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<GMA3 DataVersion="2.0.2.0">
-  <UserPlugin Name="MyPlugin" Author="Alban Moreon" Version="0.0.0.0" Path="PluginTemplate">
-    <ComponentLua Name="PluginTemplate" FileName="PluginTemplate.lua"/>
-    <!-- <ComponentLua Name="OtherComponent" FileName="OtherComponent.lua"/> -->
-  </UserPlugin>
-</GMA3>
