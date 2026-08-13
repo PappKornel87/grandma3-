@@ -1,0 +1,122 @@
+{
+  "name": "grandMA Portable Assistant Bundle v0.2",
+  "generated_utc": "2026-08-13T21:24:18.565676+00:00",
+  "source_bundle": "grandMA_chatgpt_project_deployment_v0_1",
+  "real_world_additions": [
+    "MA2 PresetType \"Dimmer\" At Delay <value> confirmed working in real operator use",
+    "MA2 Update -> ClearAll requires short Wait to avoid race; default 0.1 s"
+  ],
+  "file_count": 23,
+  "files": [
+    {
+      "name": "00_PORTABLE_README.md",
+      "bytes": 1430,
+      "sha256": "03991a8bf571a60da430ad687531010165dd8223e28539ee6a8c398a1edd6ce2"
+    },
+    {
+      "name": "01_PROJECT_INSTRUCTIONS.md",
+      "bytes": 4365,
+      "sha256": "7a7677f8acf8a2fed8fd01869890e2f17ec7e8a1519bd47495494a702af574a7"
+    },
+    {
+      "name": "02_REASONING_RULES.md",
+      "bytes": 12342,
+      "sha256": "f4d5ba88c5f1013d6da877db900472088cd179d38d45d219f92ccac236a7d210"
+    },
+    {
+      "name": "03_VALIDATION_RULES.md",
+      "bytes": 9939,
+      "sha256": "d277455e2bfee071dbbaf64a89c5d5595c1b9f2d6dd695a897e9f16b5336c4a1"
+    },
+    {
+      "name": "04_OUTPUT_RULES.md",
+      "bytes": 4117,
+      "sha256": "d18594e66b58a57b172080e6b38572ac6f4a321cc28e7fbd9053037b4f94b238"
+    },
+    {
+      "name": "05_ORCHESTRATION_RULES.md",
+      "bytes": 4389,
+      "sha256": "ad25122c1ab6dc96867edf6b19d07d44fcc18e1dbef49b6756064b16c4100c5a"
+    },
+    {
+      "name": "06_RETRIEVAL_RULES.md",
+      "bytes": 855,
+      "sha256": "65d20ea9ab827f981c0d1eaced62f61e9c329d3338840aa66d4cf250c927b739"
+    },
+    {
+      "name": "07_MODEL_REASONER_PROMPT_REFERENCE.md",
+      "bytes": 2779,
+      "sha256": "b99fda59a2bce41fda01649fc859e6501628b2a1e890fd818cfb4cd3db934254"
+    },
+    {
+      "name": "08_MA2_RUNTIME_EVIDENCE_SUMMARY.json",
+      "bytes": 15472,
+      "sha256": "d6849ebef1e5def93ac2bcb0780c837969e64d5b246d33d45a8e1aef9955ba4a"
+    },
+    {
+      "name": "09_SEMANTIC_GUARDRAILS.md",
+      "bytes": 2156,
+      "sha256": "ea7f831b888835a27b8d1a3ed4eda1f184bd0589e3a86edfb4b13a15cd1677c6"
+    },
+    {
+      "name": "10_MA2_OFFICIAL_KEYWORDS_GUIDE.md",
+      "bytes": 1101,
+      "sha256": "8c1c0f7cf93cc27dc7ea9502ae91429b3c388ac08dfd73e3fd16c46287344363"
+    },
+    {
+      "name": "11_MA3_OFFICIAL_KEYWORDS_GUIDE.md",
+      "bytes": 922,
+      "sha256": "c7ec9f7208002f1bd0c12674ea840fd3c5a467b97bf1409354b93f5375519c81"
+    },
+    {
+      "name": "12_CANONICAL_COMMAND_GRAMMAR_RULES.md",
+      "bytes": 795,
+      "sha256": "ce98d5789c19882e8c84f279c8d01e263139d8e7253b965735f9993cbba55b24"
+    },
+    {
+      "name": "13_COMMAND_GRAMMAR_VALIDATION_RULES.md",
+      "bytes": 585,
+      "sha256": "068374403a62f2b10d64ef576c50d971fd0f95b3c822829ea657296fbfd520bf"
+    },
+    {
+      "name": "14_ARTIFACT_VALIDATION_RULES.md",
+      "bytes": 2817,
+      "sha256": "dd6d8de605533a677453f5a307a9408dc8c49b16b3d8d6bcdd33e4fa241bd110"
+    },
+    {
+      "name": "15_CANONICAL_KNOWLEDGE.jsonl",
+      "bytes": 14159437,
+      "sha256": "8536feb940be229ffa331a7c242a2cb6e3cfb95033c6be637e9275387e239563"
+    },
+    {
+      "name": "16_CANONICAL_COMMAND_GRAMMAR.json",
+      "bytes": 3325716,
+      "sha256": "80029522b395750bc3171335ef60234f3801a862f696e78c83dcdbd67534fdee"
+    },
+    {
+      "name": "17_KNOWLEDGE_MANIFEST.json",
+      "bytes": 2285,
+      "sha256": "9d0cd2cd8e582cab2282972ba72d5e0f87875b0396e28169cf5d9bd426b5e2a8"
+    },
+    {
+      "name": "18_VALIDATION_STATUS.md",
+      "bytes": 580,
+      "sha256": "49d1b937b2f389715a0212a04066a9befdd96df2e3270a25389cacae052451d8"
+    },
+    {
+      "name": "19_QUICK_START_PROMPTS.md",
+      "bytes": 783,
+      "sha256": "dc7f826e593690e02050a438b7d23f7d1cc0d90ebee8a7e28e94514dedc035cb"
+    },
+    {
+      "name": "20_DEPLOYMENT_GUIDE.md",
+      "bytes": 795,
+      "sha256": "5782315e8172fafd0cba5e1aefb6993e3fd88014723f5cbfc6916320ac96006b"
+    },
+    {
+      "name": "21_PORTABLE_SYSTEM_PROMPT.md",
+      "bytes": 1083,
+      "sha256": "2c031a048ab62ee6fe3189079096e067ecbb3eb1ee90fd6448191b07a43e5774"
+    }
+  ]
+}

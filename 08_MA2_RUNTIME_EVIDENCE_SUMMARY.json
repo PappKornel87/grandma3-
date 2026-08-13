@@ -1,0 +1,476 @@
+{
+  "RUNTIME_VALIDATION_REPORT_v0_4.json": {
+    "release": "grandMA_unified_release_v0_4_runtime",
+    "generated_utc": "2026-08-12T22:51:49.317093+00:00",
+    "runtime": {
+      "probe_schema": "grandMA2_runtime_probe_v0_1",
+      "target_version": "3.9.63.6",
+      "hardware": "GMA2",
+      "build_date": "May 15 2026",
+      "build_time": "10:18:18",
+      "git_version": "bf457f9bf0c928847f4dfcafeb8bde8e561233f6",
+      "started": "2026-08-13 00:45:01",
+      "finished": "2026-08-13 00:45:05"
+    },
+    "format_note": "grandMA2 gma.export_json produced MA-specific Lua-table-like text, not strict RFC JSON; normalized before ingest.",
+    "existence_checks_seen": 38,
+    "direct_runtime_pass_promoted": [
+      "gma.build_date",
+      "gma.build_time",
+      "gma.cmd",
+      "gma.gethardwaretype",
+      "gma.gettime",
+      "gma.git_version",
+      "gma.network.gethostsubtype",
+      "gma.network.gethosttype",
+      "gma.network.getprimaryip",
+      "gma.network.getsecondaryip",
+      "gma.network.getsessionname",
+      "gma.network.getsessionnumber",
+      "gma.network.getslot",
+      "gma.network.getstatus",
+      "gma.show.getdmx",
+      "gma.show.getvar",
+      "gma.show.setvar",
+      "gma.user.getcmddest",
+      "gma.user.getselectedexec",
+      "gma.user.getvar",
+      "gma.user.setvar"
+    ],
+    "lua_api_records_promoted": [
+      "gma.build_date",
+      "gma.build_time",
+      "gma.cmd",
+      "gma.gethardwaretype",
+      "gma.gettime",
+      "gma.git_version",
+      "gma.network.gethostsubtype",
+      "gma.network.gethosttype",
+      "gma.network.getprimaryip",
+      "gma.network.getsecondaryip",
+      "gma.network.getsessionname",
+      "gma.network.getsessionnumber",
+      "gma.network.getslot",
+      "gma.network.getstatus",
+      "gma.show.getdmx",
+      "gma.show.getvar",
+      "gma.show.setvar",
+      "gma.user.getcmddest",
+      "gma.user.getselectedexec",
+      "gma.user.getvar",
+      "gma.user.setvar"
+    ],
+    "promotion_count": 21,
+    "observed_not_promoted": {
+      "gma.show.getobj.handle": {
+        "entry": "gma.show.getobj.handle(\"Root\")",
+        "reason": "PASS without Lua error, but returned nil; semantic success not established."
+      }
+    },
+    "runtime_failures": {},
+    "command_evidence": {
+      "gma.cmd(\"Help\")": "PASS"
+    },
+    "policy": [
+      "Existence-only checks do not promote behavior verification.",
+      "Calls returning nil are not treated as semantic success unless nil is the expected result.",
+      "Round-trip variable tests promote both setter and getter APIs when the returned value matches.",
+      "VERIFIED_RUNTIME applies only to the exact tested runtime scope 3.9.63.6."
+    ]
+  },
+  "RUNTIME_MUTATION_VALIDATION_REPORT_v0_5.json": {
+    "release": "grandMA_unified_release_v0_5_runtime_mutation",
+    "generated_utc": "2026-08-12T22:56:56.773464+00:00",
+    "target_version": "3.9.63.6",
+    "probe_schema": "grandMA2_mutation_probe_v0_1",
+    "tests": {
+      "delete_macro": {
+        "command": "Delete Macro 9999 /nc",
+        "status": "PASS",
+        "error": "nil"
+      },
+      "store_macro": {
+        "command": "Store Macro 9999 \"AI_BV_TEMP\" /o",
+        "status": "PASS",
+        "error": "nil"
+      },
+      "label_macro": {
+        "command": "Label Macro 9999 \"AI_BV_TEMP\"",
+        "status": "PASS",
+        "error": "nil"
+      }
+    },
+    "summary": {
+      "passed": 3,
+      "total": 3,
+      "all_pass": true
+    },
+    "new_runtime_command_behavior_records": 3,
+    "important_scope_limit": "These PASS results validate the exact Store/Label/Delete commands on Macro 9999 in the tested 3.9.63.6 runtime. They do not prove all Store/Label/Delete forms or other object classes."
+  },
+  "RUNTIME_COVERAGE_REPORT_v0_6.json": {
+    "release": "grandMA_unified_release_v0_6_runtime_coverage",
+    "generated_utc": "2026-08-12T23:02:02.624107+00:00",
+    "target_version": "3.9.63.6",
+    "safe_probe_summary": {
+      "total": 12,
+      "pass": 12,
+      "fail": 0
+    },
+    "mutation_probe_summary": {
+      "total": 25,
+      "pass": 25,
+      "fail": 0
+    },
+    "runtime_api_promoted": [
+      "gma.show.getobj.amount",
+      "gma.show.getobj.class",
+      "gma.show.getobj.handle",
+      "gma.show.getobj.index",
+      "gma.show.getobj.name",
+      "gma.show.getobj.number",
+      "gma.show.getobj.parent",
+      "gma.show.getobj.verify",
+      "gma.show.property.amount",
+      "gma.show.property.get",
+      "gma.show.property.name"
+    ],
+    "runtime_api_promoted_count": 11,
+    "new_exact_command_behavior_records": 5,
+    "canonical_records": 20768,
+    "scope_limits": [
+      "Runtime verification applies to exact tested grandMA2 3.9.63.6 calls.",
+      "Sequence/Cue Store/Label/Delete evidence is exact-command evidence, not proof of every command variant.",
+      "Object/property API promotion requires successful non-nil runtime result."
+    ]
+  },
+  "RUNTIME_BROAD_COVERAGE_REPORT_v0_7.json": {
+    "release": "grandMA_unified_release_v0_7_broad_runtime",
+    "generated_utc": "2026-08-12T23:07:18.484875+00:00",
+    "target_version": "3.9.63.6",
+    "safe_probe": {
+      "total": 90,
+      "pass": 90,
+      "fail": 0,
+      "nil_pass": 3
+    },
+    "mutation_probe": {
+      "total": 30,
+      "pass": 30,
+      "fail": 0,
+      "nil_pass": 1
+    },
+    "macro_probe": {
+      "total": 10,
+      "pass": 10,
+      "fail": 0,
+      "nil_pass": 1
+    },
+    "runtime_api_promoted": [
+      "gma.gethardwaretype",
+      "gma.gettime",
+      "gma.network.gethostsubtype",
+      "gma.network.gethosttype",
+      "gma.network.getprimaryip",
+      "gma.network.getsecondaryip",
+      "gma.network.getsessionname",
+      "gma.network.getsessionnumber",
+      "gma.network.getslot",
+      "gma.network.getstatus",
+      "gma.show.getdmx",
+      "gma.show.getobj.class",
+      "gma.show.getobj.handle",
+      "gma.show.getobj.index",
+      "gma.show.getobj.name",
+      "gma.show.getobj.number",
+      "gma.show.getobj.parent",
+      "gma.show.getobj.verify",
+      "gma.show.getvar",
+      "gma.show.setvar",
+      "gma.user.getcmddest",
+      "gma.user.getselectedexec",
+      "gma.user.getvar",
+      "gma.user.setvar"
+    ],
+    "runtime_api_promoted_count": 24,
+    "exact_command_records_added": 30,
+    "canonical_records": 20798,
+    "notable_findings": [
+      "Safe probe: Timecode 1, Preset 1.1, and Macro 1 handles returned nil; these were not promoted as successful handle behavior.",
+      "Broad mutation probe: Executor 100.1 handle returned nil after Assign, so executor-handle behavior for that path was not promoted from this test.",
+      "Macro workflow probe: Macro 9998 child0 returned nil and amount returned 0 even though Store Macro 9998.1/9998.2 commands returned PASS; child traversal behavior is therefore not promoted from this probe.",
+      "All command-bearing mutation/workflow tests returned PASS at the Lua command-call level."
+    ],
+    "scope_limits": [
+      "PASS means the exact tested call/command completed without Lua error on grandMA2 3.9.63.6.",
+      "Nil-return calls are retained as runtime evidence but not promoted as successful API behavior.",
+      "Command behavior records remain exact-form evidence and are not generalized to all objects/options."
+    ]
+  },
+  "RUNTIME_MEGA_COVERAGE_REPORT_v0_8.json": {
+    "release": "grandMA_unified_release_v0_8_mega_runtime",
+    "generated_utc": "2026-08-12T23:13:12.164264+00:00",
+    "target_version": "3.9.63.6",
+    "probe_summaries": {
+      "macro_variable": {
+        "total": 30,
+        "pass": 30,
+        "fail": 0,
+        "nil_pass": 5
+      },
+      "sequence_executor": {
+        "total": 47,
+        "pass": 47,
+        "fail": 0,
+        "nil_pass": 1
+      },
+      "preset_attribute": {
+        "total": 16,
+        "pass": 16,
+        "fail": 0,
+        "nil_pass": 3
+      },
+      "fixture_group_selection": {
+        "total": 22,
+        "pass": 22,
+        "fail": 0,
+        "nil_pass": 0
+      },
+      "mega_safe": {
+        "total": 295,
+        "pass": 295,
+        "fail": 0,
+        "nil_pass": 8
+      }
+    },
+    "aggregate": {
+      "total": 410,
+      "pass": 410,
+      "fail": 0,
+      "nil_pass": 17
+    },
+    "runtime_api_promoted": [
+      "gma.gethardwaretype",
+      "gma.gettime",
+      "gma.network.gethostsubtype",
+      "gma.network.gethosttype",
+      "gma.network.getprimaryip",
+      "gma.network.getsecondaryip",
+      "gma.network.getsessionname",
+      "gma.network.getsessionnumber",
+      "gma.network.getslot",
+      "gma.network.getstatus",
+      "gma.show.getdmx",
+      "gma.show.getobj.amount",
+      "gma.show.getobj.class",
+      "gma.show.getobj.handle",
+      "gma.show.getobj.index",
+      "gma.show.getobj.name",
+      "gma.show.getobj.number",
+      "gma.show.getobj.parent",
+      "gma.show.getobj.verify",
+      "gma.show.getvar",
+      "gma.show.property.amount",
+      "gma.show.property.get",
+      "gma.show.property.name",
+      "gma.show.setvar",
+      "gma.user.getcmddest",
+      "gma.user.getselectedexec",
+      "gma.user.getvar",
+      "gma.user.setvar"
+    ],
+    "runtime_api_promoted_count": 28,
+    "exact_command_call_records_added": 65,
+    "canonical_records": 20863,
+    "notable_findings": {
+      "macro_children_nil": [
+        "macro.child.4",
+        "macro.child.3",
+        "macro.child.2",
+        "macro.child.1",
+        "macro.child.0"
+      ],
+      "executor_handle_nil": true,
+      "preset_handles_nil": [
+        "handle:Preset 2.1",
+        "handle:Preset 1.1",
+        "handle:Preset 3.1"
+      ]
+    },
+    "evidence_policy": [
+      "PASS from gma.cmd means the call completed without Lua error; this alone is not full semantic proof.",
+      "Nil-return API calls are preserved but not promoted as successful behavior.",
+      "Object/property API promotion requires successful non-nil runtime results.",
+      "Exact runtime scope is grandMA2 3.9.63.6."
+    ]
+  },
+  "RUNTIME_HARNESS_REPORT_v0_9.json": {
+    "release": "grandMA_unified_release_v0_9_runtime_harness",
+    "generated_utc": "2026-08-12T23:17:28.687504+00:00",
+    "target_version": "3.9.63.6",
+    "started": "2026-08-13 01:16:04",
+    "finished": "2026-08-13 01:16:14",
+    "counters": {
+      "pass": 625,
+      "nil_pass": 23,
+      "fail": 0,
+      "total": 625
+    },
+    "phase_stats": {
+      "GROUP_MUTATION": {
+        "total": 18,
+        "pass": 18,
+        "fail": 0,
+        "nil_pass": 0
+      },
+      "OBJECT_MATRIX": {
+        "total": 382,
+        "pass": 382,
+        "fail": 0,
+        "nil_pass": 12
+      },
+      "SAFE_COMMANDS": {
+        "total": 31,
+        "pass": 31,
+        "fail": 0,
+        "nil_pass": 0
+      },
+      "SAFE_CORE": {
+        "total": 44,
+        "pass": 44,
+        "fail": 0,
+        "nil_pass": 0
+      },
+      "SEQUENCE_MUTATION": {
+        "total": 67,
+        "pass": 67,
+        "fail": 0,
+        "nil_pass": 1
+      },
+      "MACRO_MUTATION": {
+        "total": 47,
+        "pass": 47,
+        "fail": 0,
+        "nil_pass": 10
+      },
+      "VIEW_LAYOUT_MUTATION": {
+        "total": 36,
+        "pass": 36,
+        "fail": 0,
+        "nil_pass": 0
+      }
+    },
+    "runtime_api_promoted": [
+      "gma.build_date",
+      "gma.build_time",
+      "gma.gethardwaretype",
+      "gma.gettime",
+      "gma.git_version",
+      "gma.network.gethostsubtype",
+      "gma.network.gethosttype",
+      "gma.network.getprimaryip",
+      "gma.network.getsecondaryip",
+      "gma.network.getsessionname",
+      "gma.network.getsessionnumber",
+      "gma.network.getslot",
+      "gma.network.getstatus",
+      "gma.show.getdmx",
+      "gma.show.getobj.amount",
+      "gma.show.getobj.class",
+      "gma.show.getobj.handle",
+      "gma.show.getobj.index",
+      "gma.show.getobj.name",
+      "gma.show.getobj.number",
+      "gma.show.getobj.parent",
+      "gma.show.getobj.verify",
+      "gma.show.getvar",
+      "gma.show.property.amount",
+      "gma.show.property.get",
+      "gma.show.property.name",
+      "gma.show.setvar",
+      "gma.user.getcmddest",
+      "gma.user.getselectedexec",
+      "gma.user.getvar",
+      "gma.user.setvar"
+    ],
+    "runtime_api_promoted_count": 31,
+    "new_exact_command_call_records": 53,
+    "canonical_records": 20916,
+    "nil_results": [
+      "handle:World 3",
+      "macro.child.6",
+      "macro.child.4",
+      "handle:Preset 3.1",
+      "handle:Preset 1.1",
+      "handle:Layout 3",
+      "handle:Macro 1",
+      "handle:Filter 3",
+      "macro.child.1",
+      "macro.child.0",
+      "handle:Preset 2.1",
+      "macro.child.2",
+      "handle:World 2",
+      "macro.child.8",
+      "macro.child.9",
+      "macro.child.7",
+      "macro.child.5",
+      "exec.handle",
+      "handle:Timecode 3",
+      "handle:Filter 2",
+      "handle:Timecode 1",
+      "macro.child.3",
+      "handle:Timecode 2"
+    ],
+    "failures": [],
+    "notable_findings": [
+      "All 625 tests completed with PASS at the harness level.",
+      "23 PASS calls returned nil; these remain evidence but are not treated as successful non-nil behavior.",
+      "Macro child traversal remained nil for all tested Macro 9992 child indices.",
+      "Executor 98.1 handle remained nil after assignment.",
+      "Several show-dependent object paths such as Preset 1.1/2.1/3.1, Timecode 1-3, Filter 2-3, World 2-3, Layout 3 and Macro 1 returned nil."
+    ],
+    "evidence_policy": [
+      "gma.cmd PASS proves call completion without Lua error, not full semantic side effect.",
+      "Successful non-nil direct API results may be promoted to VERIFIED_RUNTIME.",
+      "Nil API returns are not promoted.",
+      "Runtime scope is exact: grandMA2 3.9.63.6."
+    ]
+  },
+  "BLINDSPOT_RUNTIME_REPORT_v0_10.json": {
+    "release": "grandMA_unified_release_v0_10_blindspot_runtime",
+    "generated_utc": "2026-08-12T23:22:42.367378+00:00",
+    "target_version": "3.9.63.6",
+    "test_total": 108,
+    "pass": 108,
+    "fail": 0,
+    "nil_pass": 28,
+    "semantic_findings_added": 6,
+    "new_command_records": 23,
+    "canonical_records": 20945,
+    "resolved": [
+      "Group Store/Label/Delete semantic postconditions",
+      "View Store/Label/Delete semantic postconditions",
+      "Macro line traversal assumptions rejected for tested child/direct-path forms",
+      "Executor CLI notation vs getobj.handle mismatch established",
+      "Preset addressing confirmed show-dependent",
+      "Special object nil results interpreted as show/path existence evidence"
+    ],
+    "next_recommendation": "Stop broadening MA2 runtime coverage for now. Update reasoner/validator to consume negative/runtime-semantic findings and then run end-to-end macro/plugin generation evals."
+  },
+  "PRESET_SEMANTICS_CORRECTION_v0_11.json": {
+    "release": "grandMA_unified_release_v0_11_preset_semantics",
+    "generated_utc": "2026-08-12T23:28:15.196950+00:00",
+    "base_release": "grandMA_unified_release_v0_10_blindspot_runtime",
+    "target": "MA2 3.9.x / exact runtime 3.9.63.6",
+    "corrections": [
+      "Replaced overly broad `preset_path_semantics_show_dependent` finding.",
+      "Explicitly separated official CLI Preset syntax from Lua getobj.handle addressing.",
+      "Recorded two-component CLI Preset form as preset-type + preset-ID.",
+      "Recorded runtime evidence that bare Preset resolver results can be context-sensitive.",
+      "Updated reasoning, validation, and model reasoner rules."
+    ],
+    "canonical_records": 20946,
+    "replaced_findings": 1,
+    "new_semantic_rules": 1
+  }
+}
